@@ -1,0 +1,27 @@
+.navbar {
+  .brand-name {
+    font-size: 48px;
+    font-weight: 700;
+  }
+
+  .menu-items-wrapper {
+    margin-left: 5%;
+  }
+  .menu-items {
+    color: hsl(0, 0%, 75%);
+    font-weight: 700;
+    &:hover {
+      color: hsl(260, 8%, 14%);
+    }
+  }
+
+  .log-in {
+    @extend .menu-items;
+    border: none;
+    background-color: unset;
+    font-size: larger;
+    padding: 0.5rem 2rem;
+    width: inherit;
+  }
+
+}

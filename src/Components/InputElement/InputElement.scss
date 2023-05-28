@@ -1,0 +1,34 @@
+.input-wrapper {
+  background-image: url("/src/assets/bg-shorten-desktop.svg");
+  background-color: hsl(255, 11%, 22%);
+  border: none;
+  border-radius: 8px;
+  padding: 2rem;
+  padding-bottom: 1rem;
+  margin-top: -3rem;
+
+  .input {
+    display: flex;
+    flex-direction: column;
+
+    .link-input {
+      width: 100%;
+      height: 45px;
+      border-radius: 5px;
+      border: none;
+      outline: none;
+      padding-left: 1rem;
+    }
+    .red-outline {
+      border: 3px solid hsl(0, 87%, 67%) !important;
+    }
+    span {
+      font-style: italic;
+    }
+  }
+
+  .shorten-btn{
+   border-radius: 5px;
+   min-width: fit-content;
+  }
+}

@@ -1,0 +1,43 @@
+@mixin textSetting($weight, $size, $align) {
+  color: white;
+  font-weight: $weight;
+  font-size: $size !important;
+  text-align: $align;
+}
+
+.footer-wrapper {
+  background-color: hsl(260, 8%, 14%);
+  padding: 2rem;
+
+  .footer-brand {
+    @include textSetting(700, 40px, center);
+  }
+
+  .footer-menus {
+    display: flex;
+    flex-direction: row;
+    column-gap: 3rem;
+  }
+  .footer-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+  }
+
+  .footer-menu-title {
+    @include textSetting(700, 18px, left);
+    padding-bottom: 1rem;
+   }
+   
+   .footer-sub-menu {
+      @include textSetting(400, 12px, left);
+      padding-bottom: 0.5rem;
+  }
+
+  .footer-social-icons {
+    display: flex;
+    justify-content: center;
+    column-gap: 1rem;
+    cursor: pointer;
+  }
+}

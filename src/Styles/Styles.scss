@@ -1,0 +1,38 @@
+$lightPrimary: hsl(180, 66%, 49%);
+$darkPrimary: hsl(257, 27%, 26%);
+$Red: hsl(0, 87%, 67%);
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.light-primary {
+  color: $lightPrimary;
+}
+.dark-primary {
+  color: $darkPrimary;
+}
+.bg-dark-primary {
+  background-color: $darkPrimary;
+}
+.red {
+  color: $Red;
+}
+
+.blue-btn {
+  border: none;
+  font-size: larger;
+  padding: 0.5rem 2rem;
+  border-radius: 24px;
+  background-color: $lightPrimary;
+  color: white;
+  font-weight: 700;
+  &:hover {
+   opacity: 0.8;
+  }
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}

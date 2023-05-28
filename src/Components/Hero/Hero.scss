@@ -1,0 +1,21 @@
+@mixin textStyle($size, $weight, $color, $alignment, $pb) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+  text-align: $alignment;
+  padding-bottom: $pb;
+}
+
+.hero-txt-wrapper {
+  .hero-header {
+    @include textStyle(40px, 900, _, left, _);
+  }
+  .hero-details {
+    @include textStyle(20px, 500, hsl(0, 0%, 75%), left, 2rem);
+  }
+}
+
+.hero-img {
+   object-fit: cover;
+   max-width: 100%;
+}

@@ -1,0 +1,28 @@
+.advanced-statistics {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3rem;
+
+  .static-header {
+    font-weight: 700;
+    font-size: 48px;
+    padding: 1rem auto;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .static-details {
+    color: hsl(0, 0%, 75%);
+    max-width: 33%;
+    text-align: center;
+  }
+
+  .static-cards {
+    max-width: 70%;
+  }
+  .statics-card-grid {
+    @extend .advanced-statistics;
+  }
+}

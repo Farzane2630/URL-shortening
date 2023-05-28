@@ -1,0 +1,28 @@
+$Cyan: hsl(180, 66%, 49%);
+
+.prev-link-wrapper {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: inherit;
+  min-width: fit-content;
+
+  .created-link {
+    color: $Cyan;
+    margin-right: 1rem;
+  }
+
+  .copy-btn {
+    border-radius: 5px;
+  }
+
+  // .copied{
+  //    @extend .bg-dark-primary;
+  // }
+}

@@ -1,0 +1,26 @@
+.static-card-wrapper{
+   background-color: white;
+   padding: 2rem;
+   border-radius: 5px;
+   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+   width: 85%;
+}
+
+.static-icon-wrapper {
+   border-radius: 50%;
+   width: fit-content;
+   height: fit-content;
+   background-color: hsl(257, 27%, 26%);
+   padding: 1.5rem;
+   margin-top: -35%;
+   margin-bottom: 10%;
+}
+
+.static-card-title {
+   font-weight: 700;
+   padding-bottom: 1rem;
+}
+.static-card-details {
+   font-weight: 400;
+   color: hsl(0, 0%, 75%);
+}
