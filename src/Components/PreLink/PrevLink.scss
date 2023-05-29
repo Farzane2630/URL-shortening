@@ -10,7 +10,8 @@ $Cyan: hsl(180, 66%, 49%);
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: inherit;
+  margin: 1rem auto 0 auto;
+  width: 100%;
   min-width: fit-content;
 
   .created-link {
@@ -21,8 +22,4 @@ $Cyan: hsl(180, 66%, 49%);
   .copy-btn {
     border-radius: 5px;
   }
-
-  // .copied{
-  //    @extend .bg-dark-primary;
-  // }
 }
