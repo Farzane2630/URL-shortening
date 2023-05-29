@@ -13,7 +13,7 @@ export default function Hero() {
           <button className="blue-btn">Get Started</button>
         </Grid>
         <Grid item xs={12} md={6} order={{ xs: 1, md: 2 }}>
-          <img src="src/assets/illustration-working.svg" alt="hero-img" className="hero-img" />
+          <img src="/src/assets/illustration-working.svg" alt="hero-img" className="hero-img" />
         </Grid>
       </Grid>
     </>

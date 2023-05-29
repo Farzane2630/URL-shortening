@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { api } from "../axios";
+import api from "../axios";
 
 // fetch saved links from server
 export const getLinks = createAsyncThunk("fetchLinksfromServer", async () => {

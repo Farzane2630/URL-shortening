@@ -11,7 +11,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import './Index.scss'
 import { setIsClicked } from '../../redux/savedLinks'
 export default function Index() {
-  const savedLinks = useSelector(state => state)
+  const savedLinks = useSelector(state => state.links)
   const dispatch = useDispatch()
 
   const copyText = (cretedLink, linkID) => {
