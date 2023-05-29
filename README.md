@@ -5,10 +5,10 @@
 
 ## Table of contents
 - [features](#features)
-  - [Screenshot](#screenshot)
-  - [Link](#links)
-  - [Built with](#built-with)
-  - [Useful resources](#useful-resources)
+- [Screenshot](#screenshot)
+- [Link](#links)
+- [Built with](#built-with)
+- [Useful resources](#useful-resources)
 - [Author](#author)
 - [API](#API)
 - [Run Locally](#Run Locally)
