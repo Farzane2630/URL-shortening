@@ -12,7 +12,7 @@ const apiURL = "https://api.rebrandly.com/v1/links"
 export default function InputElement() {
 
    const dispatch = useDispatch()
-   const savedLinks = useSelector(state => state.links)
+   const savedLinks = useSelector(state => state)
    return (
       <Formik
          initialValues={{ link: '' }}
