@@ -27,7 +27,7 @@ Users are be able to:
   - The `input` value is not a valid URL
 
 ## 🔗 Links
-[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://shortly.iran.liara.run/)
+[![portfolio]Live Demo! ](https://shortly.iran.liara.run/)
 
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](in/farzane-kazemi)
 
