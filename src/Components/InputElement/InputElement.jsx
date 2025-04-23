@@ -44,7 +44,7 @@ export default function InputElement() {
             return errors
          }}
       >
-         {({ values, handleChange, handleSubmit, errors, touched }) => (
+         {({ values, handleChange, handleSubmit, errors, touched, isSubmitting }) => (
             <Form className='input-wrapper'>
                <div id="input">
                   <Field
@@ -61,7 +61,9 @@ export default function InputElement() {
                <div className="input">
                   <button
                      className="blue-btn shorten-btn"
-                     type='submit'>Shorten It!</button>
+                     type='submit'
+                     disabled={isSubmitting} >
+                     {isSubmitting ? "Shortening ..." : "Shorten It!"} </button>
                </div>
             </Form>
          )}

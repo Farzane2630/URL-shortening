@@ -8,7 +8,7 @@ import './Styles/resetCSS.scss'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Styles/index.scss'
 import './Styles/Styles.scss'
-import './Styles/MediaQuery.scss'
+import './Styles/mediaQuery.scss'
 import { Provider } from 'react-redux';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
