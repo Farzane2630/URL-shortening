@@ -7,30 +7,41 @@ import { saveLink } from '../../redux/savedLinks';
 import "./InputElement.scss"
 import axios from 'axios';
 
-const apiURL = "https://api.rebrandly.com/v1/links"
+// const apiURL = "https://api.rebrandly.com/v1/links"
 
 export default function InputElement() {
 
    const dispatch = useDispatch()
-   const savedLinks = useSelector(state => state)
+   // const savedLinks = useSelector(state => state)
    return (
       <Formik
          initialValues={{ link: '' }}
          onSubmit={async (values) => {
+            try {
+               const encodedUrl = encodeURIComponent(values.link.trim());
+               const response = await axios.post(
+                  "https://cleanuri.com/api/v1/shorten",
+                  `url=${encodedUrl}`,
+                  {
+                     headers: {
+                        "Content-Type": "application/x-www-form-urlencoded",
+                     },
+                  }
+               );
 
-            // create shorter link from brandly API
-            const response = await axios.post(apiURL, {
-               //user`s link
-               destination: values.link,
-               domain: { fullName: "rebrand.ly" },
-            }, {
-               headers: {
-                  "Content-Type": "application/json",
-                  "apikey": "bc0212ddff4943cbb345acfea65aeddc",
-               },
-            })
-            dispatch(saveLink({ id: uuidv4(), originalLink: values.link, createdLink: response.data.shortUrl }))
+               dispatch(saveLink({
+                  id: uuidv4(),
+                  originalLink: values.link,
+                  createdLink: response.data.result_url
+               }));
+
+               values.link = ""
+
+            } catch (error) {
+               console.error("URL shortening failed:", error.response?.data || error.message);
+            }
          }}
+
          validate={(values) => {
             const errors = {};
 
@@ -44,7 +55,7 @@ export default function InputElement() {
             return errors
          }}
       >
-         {({ values, handleChange, handleSubmit, errors, touched, isSubmitting }) => (
+         {({ values, handleChange, handleSubmit, errors, touched, isSubmitting, resetForm }) => (
             <Form className='input-wrapper'>
                <div id="input">
                   <Field

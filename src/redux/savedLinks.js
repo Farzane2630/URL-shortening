@@ -7,7 +7,7 @@ export const getLinks = createAsyncThunk("fetchLinksfromServer", async () => {
   return res.data;
 });
 
-// save createdlinks objects
+// save saved links object
 export const saveLink = createAsyncThunk(
   "postLinksIntoServer",
   async ({ id, originalLink, createdLink }) => {
@@ -41,11 +41,11 @@ const slice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder.addCase(getLinks.fulfilled, (state, action) => {
-      return action.payload;
+      return action.payload.reverse()
     });
 
     builder.addCase(saveLink.fulfilled, (state, action) => {
-      state.push(action.payload);
+      state.unshift(action.payload);
     });
     builder.addCase(setIsClicked.fulfilled, (state, action) => {
       return action.payload;
