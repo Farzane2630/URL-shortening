@@ -52,7 +52,7 @@ Users are be able to:
 
 ## API Reference
 
-https://www.rebrandly.com/
+- [cleanuri](https://cleanuri.com/api/v1/shorten)
 
 
 ## Run Locally
@@ -72,7 +72,7 @@ Install dependencies
 Start the server
 
 ```bash
-  json-server --watch db.json
+  json-server db.json
 ```
 
 Run the app
